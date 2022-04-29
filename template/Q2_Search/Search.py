@@ -11,7 +11,16 @@ def main():
 def serch_index(sorted_array, target_number):
 
     # ここから記述
-
+    low = 0
+    high = len(sorted_array)-1
+    while low <= high:
+        mid = (low+high)//2
+        if target_number == sorted_array[mid]:
+            return mid
+        elif target_number < sorted_array[mid]:
+            high = mid-1
+        elif target_number > sorted_array[mid]:
+            low = mid + 1
 
     # ここまで記述
 
